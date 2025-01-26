@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be my Valentine?</title>
+    <style>
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(images/pngtree-valentines-day-pink-gradient-love-background-image_512034.jpg);
+            background-size: cover;
+            position: relative;
+        }
+
+        h1 {
+            color: rgb(78, 6, 78);
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(205, 26, 86, 0.58); /* Adds contrast */
+        
+        }
+
+        
+
+        .button-container {
+            display:flex;
+            gap: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #yesButton {
+            background-color: #e08dc6;
+            color: white;
+        }
+
+        #yesButton:hover {
+            background-color: #cf66ae;
+        }
+
+        #noButton {
+            background-color: #e08dc6;
+            color: white;
+        }
+
+        #noButton:hover {
+            background-color: #cf66ae;
+        }
+
+        .emo1 {
+            position:absolute;
+            bottom: 10%;
+            right: 15%;
+            width: auto;
+            height: 300px;
+        }
+        .emo2 {
+            position: absolute;
+            top: 5%;
+            left: 40%;
+            width: auto;
+            height: 250px;
+        }
+        .emo4 {
+            position: absolute;
+            bottom: 5%;
+            left: 15%;
+            width: auto;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- images -->
+    <img src="images/emo1.jpg" class="emo1"/>
+    <img src="images/emo2.jpg" class="emo2"/>
+    <img src="images/emo4.webp" class="emo4"/>
+    
+    <h1> Be My Valentine? uwu</h1>
+    
+
+    <div class="button-container">
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+       
+    </div>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+        const yesButton = document.getElementById('yesButton');
+
+        noButton.addEventListener('click', () => {
+            const maxWidth = window.innerWidth - noButton.offsetWidth;
+            const maxHeight = window.innerHeight - noButton.offsetHeight;
+
+            const randomX = Math.floor(Math.random() * maxWidth);
+            const randomY = Math.floor(Math.random() * maxHeight);
+
+            noButton.style.position = 'absolute';
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+        });
+
+        yesButton.addEventListener('click', () => {
+            window.location.href = 'Horray.html';
+        });
+    </script>
+</body>
+</html>
